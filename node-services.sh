@@ -47,42 +47,6 @@ stop()
 }
 
 #######################################
-# Para todos os containers e remove todas as imagens compiladas por esta
-# aplicação.
-#
-# Globals:
-#   None
-# Arguments:
-#   None
-# Returns:
-#   None
-#######################################
-clear()
-{
-    # para sevicos em execucao
-    docker-compose stop
-    # remove imagens geradas pelo composer
-    docker-compose rm -f
-
-    # remove apenas as imagens geradas por esta aplicacao (img base sao preservadas)
-    local img_composer=$(docker images -q dev-composer 2> /dev/null)
-    if [[ "${img_composer}" != "" ]]; then
-        docker rmi -f ${img_composer}
-    fi
-
-    local img_php_fpm=$(docker images -q dev-php-fpm 2> /dev/null)
-    if [[ "${img_php_fpm}" != "" ]]; then
-        docker rmi -f ${img_php_fpm}
-    fi
-
-    local img_mysql=$(docker images -q dev-mysql 2> /dev/null)
-    if [[ "${img_mysql}" != "" ]]; then
-        docker rmi -f ${img_mysql}
-    fi
-
-}
-
-#######################################
 # Instala funções extras no bash do usuário para manipulação de containers.
 #
 # Globals:
