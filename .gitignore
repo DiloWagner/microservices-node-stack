@@ -1,0 +1,6 @@
+.env
+.DS_Store
+data/
+conf/node-services/start-services.sh
+conf/openresty/nginx/nginx.conf
+conf/nginx/nginx.d/
