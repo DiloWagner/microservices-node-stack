@@ -3,7 +3,7 @@
 Complete environment for Docker and Docker Compose container development for services initialization abstraction.
 
 It also has the functionality of including shortcuts in **bash**(terminal command interpreter) to facilitate the
-execution of commands present in the containers, directly in the terminal of the host host. This allows you to perform some
+execution of commands present in the containers, directly in the terminal of the host. This allows you to perform some
 commands like **npm, mongo, etc.** transparently and out of the container.
 
 ## Funcionality
