@@ -28,7 +28,7 @@ install_bash_functions=1
 set_vars ()
 {
     question="Instalar funções adicionais para execução containerizada dos comandos
-    composer, npm, gulp, bower, mysql, mongo e mongoimport? [S/N]"
+    mongo e mongoimport? [S/N]"
     while true; do
         read -p "$question" yn
         case $yn in
@@ -106,6 +106,6 @@ set_vars
 # valida todos os parametros
 #validate
 # instala binario principal
-#install_bin
+install_bin
 # instala/atualiza funçoes adicionais caso solicitado
 install_extra_functions
